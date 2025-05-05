@@ -36,14 +36,14 @@ name = st.text_input("あなたの名前", "ゲスト")
 st.write(f"こんにちは、{name}さん！")
 
 # ボタン
-# st.subheader("ボタン")
-# if st.button("クリックしてください"):
-#     st.success("ボタンがクリックされました！")
+st.subheader("ボタン")
+if st.button("クリックしてください"):
+    st.success("ボタンがクリックされました！")
 
 # チェックボックス
-# st.subheader("チェックボックス")
-# if st.checkbox("チェックを入れると追加コンテンツが表示されます"):
-#     st.info("これは隠れたコンテンツです！")
+st.subheader("チェックボックス")
+if st.checkbox("チェックを入れると追加コンテンツが表示されます"):
+    st.info("これは隠れたコンテンツです！")
 
 # スライダー
 # st.subheader("スライダー")
@@ -51,12 +51,12 @@ st.write(f"こんにちは、{name}さん！")
 # st.write(f"あなたの年齢: {age}")
 
 # セレクトボックス
-# st.subheader("セレクトボックス")
-# option = st.selectbox(
-#     "好きなプログラミング言語は?",
-#     ["Python", "JavaScript", "Java", "C++", "Go", "Rust"]
-# )
-# st.write(f"あなたは{option}を選びました")
+st.subheader("セレクトボックス")
+option = st.selectbox(
+    "好きなプログラミング言語は?",
+    ["Python", "JavaScript", "Java", "C++", "Go", "Rust"]
+)
+st.write(f"あなたは{option}を選びました")
 
 # ============================================
 # レイアウト
@@ -74,12 +74,12 @@ st.write(f"こんにちは、{name}さん！")
 #     st.metric("メトリクス", "42", "2%")
 
 # タブ
-# st.subheader("タブ")
-# tab1, tab2 = st.tabs(["第1タブ", "第2タブ"])
-# with tab1:
-#     st.write("これは第1タブの内容です")
-# with tab2:
-#     st.write("これは第2タブの内容です")
+st.subheader("タブ")
+tab1, tab2 = st.tabs(["第1タブ", "第2タブ"])
+with tab1:
+    st.write("これは第1タブの内容です")
+with tab2:
+    st.write("これは第2タブの内容です")
 
 # エクスパンダー
 # st.subheader("エクスパンダー")
@@ -93,11 +93,11 @@ st.write(f"こんにちは、{name}さん！")
 # st.header("データの表示")
 
 # サンプルデータフレームを作成
-# df = pd.DataFrame({
-#     '名前': ['田中', '鈴木', '佐藤', '高橋', '伊藤'],
-#     '年齢': [25, 30, 22, 28, 33],
-#     '都市': ['東京', '大阪', '福岡', '札幌', '名古屋']
-# })
+df = pd.DataFrame({
+    '名前': ['田中', '鈴木', '佐藤', '高橋', '伊藤'],
+    '年齢': [25, 30, 22, 28, 33],
+    '都市': ['東京', '大阪', '福岡', '札幌', '名古屋']
+})
 
 # データフレーム表示
 # st.subheader("データフレーム")
@@ -117,14 +117,14 @@ st.write(f"こんにちは、{name}さん！")
 # ============================================
 # グラフ表示
 # ============================================
-# st.header("グラフの表示")
+st.header("グラフの表示")
 
 # ラインチャート
-# st.subheader("ラインチャート")
-# chart_data = pd.DataFrame(
-#     np.random.randn(20, 3),
-#     columns=['A', 'B', 'C'])
-# st.line_chart(chart_data)
+st.subheader("ラインチャート")
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['A', 'B', 'C'])
+st.line_chart(chart_data)
 
 # バーチャート
 # st.subheader("バーチャート")
@@ -137,16 +137,16 @@ st.write(f"こんにちは、{name}さん！")
 # ============================================
 # インタラクティブ機能
 # ============================================
-# st.header("インタラクティブ機能")
+st.header("インタラクティブ機能")
 
 # プログレスバー
-# st.subheader("プログレスバー")
-# progress = st.progress(0)
-# if st.button("進捗をシミュレート"):
-#     for i in range(101):
-#         time.sleep(0.01)
-#         progress.progress(i / 100)
-#     st.balloons()
+st.subheader("プログレスバー")
+progress = st.progress(0)
+if st.button("進捗をシミュレート"):
+    for i in range(101):
+        time.sleep(0.01)
+        progress.progress(i / 100)
+    st.balloons()
 
 # ファイルアップロード
 # st.subheader("ファイルアップロード")
